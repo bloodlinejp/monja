@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+#container {
+	width: 800px;
+}
+#header {
+	width: 100%;
+}
+#title {
+	background-color: #DDD;
+}
+#menu {
+	background-color: #EEE;
+}
+#contents {
+	overflow: hidden;
+}
+#sidebar {
+	width: 30%;
+	height:600px;
+	float:left;
+	background-color: #AAA;
+}
+#main {
+	width: 70%;
+	height:600px;
+	float:left;
+	background-color: #D4D;
+}
+#footer {
+	background-color: #5AA;
+	border: 1px #DDDDDD solid;
+}
