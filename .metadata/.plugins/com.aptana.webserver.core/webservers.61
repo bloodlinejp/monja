@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servers>
+<server host="0.0.0.0" port="3000" project="D:/workspace/ruby-on-rails-aptana3/rails-sample" type="org.radrails.rails.railsServer">
+<name>rails-sample</name>
+</server>
+</servers>

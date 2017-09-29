@@ -1,0 +1,11 @@
+class PostsController < ApplicationController
+  #GET /posts/new
+	def new
+	end
+
+  #POST /posts
+  def create
+    @post=post.new(params[:post])
+    @post.save
+  end
+end

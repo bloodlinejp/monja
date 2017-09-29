@@ -1,0 +1,9 @@
+<p>
+	<strong>タイトル：</strong>
+	<%= @post %>
+</p>
+ 
+<p>
+	<strong>内容：</strong>
+	<%= @text %>
+</p>

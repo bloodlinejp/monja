@@ -1,0 +1,10 @@
+class PostsController < ApplicationController
+#GET /posts/new
+	def new
+	end
+end
+
+#POST /posts
+  def create
+  end
+end
