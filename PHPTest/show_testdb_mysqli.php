@@ -5,15 +5,17 @@
 <body>
 	<?php
 		$conn = new mysqli("localhost", "webapp", "direct01" , "testdb");
-		  
+
 		/* 接続状況チェック */
 		if ($conn->connect_errno) {
     		printf("Connect failed: %s\n", $conn->connect_error);
     		exit();
+		} else {
+		    printf("接続に成功しました。<br/>");
 		}
-		
+
 		$str="select * from id_master";
-		
+
 		/* 連想配列取得 */
 		/*
 		$result = $conn->query($str);
@@ -24,6 +26,7 @@
 		$result = $conn->query($str);
 
 print<<<EOF
+<br/>
 <style type="text/css">
 .tbl {
 	border-collapse: collapse;
@@ -48,13 +51,13 @@ EOF;
 			"</tr>\n");
 		}
 		print("</table>");
-		
+
 		/* 結果セット開放 */
     	$result->free();
 
 	/* 接続を閉じる */
 	$conn->close();
-	
+
 	?>
 </body>
 </html>

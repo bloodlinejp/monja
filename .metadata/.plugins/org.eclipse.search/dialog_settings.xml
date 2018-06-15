@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="SearchDialog.ScopePart">
+		<item value="0" key="scope"/>
+	</section>
+	<section name="TextSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="false" key="REG_EX_SEARCH"/>
+		<item value="false" key="WHOLE_WORD"/>
+		<item value="false" key="SEARCH_DERIVED"/>
+		<section name="EXTENSIONS">
+			<item value="*" key="0"/>
+		</section>
+	</section>
 	<section name="Search">
 		<list key="Search.processedPageIds">
 			<item value="org.eclipse.rse.internal.files.ui.search.searchPage"/>
@@ -10,6 +23,8 @@
 			<item value="org.eclipse.wst.jsdt.ui.JavaSearchPage"/>
 			<item value="org.eclipse.php.ui.PHPSearchPage"/>
 			<item value="org.eclipse.pde.internal.ui.search.SearchPage"/>
+			<item value="com.python.pydev.ui.search.pySearchPage"/>
+			<item value="org.eclipse.dltk.ui.RubySearchPage"/>
 		</list>
 		<list key="Search.enabledPageIds">
 			<item value="org.eclipse.rse.internal.files.ui.search.searchPage"/>
@@ -20,6 +35,18 @@
 			<item value="org.eclipse.wst.jsdt.ui.JavaSearchPage"/>
 			<item value="org.eclipse.php.ui.PHPSearchPage"/>
 			<item value="org.eclipse.pde.internal.ui.search.SearchPage"/>
+			<item value="com.python.pydev.ui.search.pySearchPage"/>
+			<item value="org.eclipse.dltk.ui.RubySearchPage"/>
 		</list>
+	</section>
+	<section name="SearchDialog">
+		<item value="org.eclipse.search.internal.ui.text.TextSearchPage" key="PREVIOUS_PAGE"/>
+	</section>
+	<section name="DialogBounds_SearchDialog">
+		<item value="1021" key="DIALOG_WIDTH"/>
+		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
+		<item value="442" key="DIALOG_HEIGHT"/>
+		<item value="330" key="DIALOG_X_ORIGIN"/>
+		<item value="239" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

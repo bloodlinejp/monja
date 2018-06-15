@@ -1,14 +1,13 @@
-AbstractTextEditor.Color.Background.SystemDefault=true
-AbstractTextEditor.Color.Foreground.SystemDefault=true
-AbstractTextEditor.Color.SelectionForeground.SystemDefault=true
-content_assist_number_of_computers=24
+content_assist_favorite_static_members=org.eclipse.swtbot.swt.finder.matchers.WidgetMatcherFactory.*;org.hamcrest.Matchers.*;org.hamcrest.MatcherAssert.*;org.junit.Assert.*;org.eclipse.swtbot.eclipse.finder.matchers.WidgetMatcherFactory.*;org.eclipse.swtbot.swt.finder.finders.UIThreadRunnable.*;org.eclipse.swtbot.swt.finder.SWTBotAssert.*;org.eclipse.swtbot.eclipse.finder.waits.Conditions.*;org.eclipse.swtbot.swt.finder.waits.Conditions.*;org.mockito.Matchers.*;org.mockito.Mockito.*;org.hamcrest.CoreMatchers.*;org.junit.matchers.JUnitMatchers.*;org.junit.Assume.*;org.junit.jupiter.api.Assertions.*;org.junit.jupiter.api.Assumptions.*;org.junit.jupiter.api.DynamicContainer.*;org.junit.jupiter.api.DynamicTest.*
+content_assist_number_of_computers=25
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
 fontPropagated=true
 org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.editor.tab.width=
-org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.formatterprofiles.version=13
 org.eclipse.jdt.ui.javadoclocations.migrated=true
 org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>

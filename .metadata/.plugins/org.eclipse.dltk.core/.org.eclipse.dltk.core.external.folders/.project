@@ -14,5 +14,65 @@
 			<type>2</type>
 			<location>/Library/WebServer/Documents/workspace/.metadata/.plugins/org.eclipse.php.core/__language__/9016422e</location>
 		</link>
+		<link>
+			<name>.link10</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/gems/2.5.0</location>
+		</link>
+		<link>
+			<name>.link11</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/vendor_ruby/2.5.0</location>
+		</link>
+		<link>
+			<name>.link12</name>
+			<type>2</type>
+			<location>/Users/fumi/.gem/ruby/2.5.0</location>
+		</link>
+		<link>
+			<name>.link13</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/gems/2.5.0/gems/did_you_mean-1.2.0/lib</location>
+		</link>
+		<link>
+			<name>.link14</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/vendor_ruby/2.5.0/x86_64-darwin16</location>
+		</link>
+		<link>
+			<name>.link15</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/2.5.0</location>
+		</link>
+		<link>
+			<name>.link16</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/2.5.0/x86_64-darwin16</location>
+		</link>
+		<link>
+			<name>.link17</name>
+			<type>2</type>
+			<location>/opt/local/lib/ruby2.5/vendor_ruby</location>
+		</link>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>/Library/WebServer/Documents/workspace/.metadata/.plugins/org.eclipse.php.core/__language__/c803ccbd</location>
+		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>/Library/WebServer/Documents/workspace/.metadata/.plugins/org.eclipse.php.core/__language__/324d46ba</location>
+		</link>
+		<link>
+			<name>.link5</name>
+			<type>2</type>
+			<location>/Library/WebServer/Documents/workspace/.metadata/.plugins/org.eclipse.php.core/__language__/f5d9676a</location>
+		</link>
+		<link>
+			<name>.link6</name>
+			<type>2</type>
+			<location>/Library/WebServer/Documents/workspace/.metadata/.plugins/org.eclipse.php.core/__language__/5240d1c8</location>
+		</link>
 	</linkedResources>
 </projectDescription>

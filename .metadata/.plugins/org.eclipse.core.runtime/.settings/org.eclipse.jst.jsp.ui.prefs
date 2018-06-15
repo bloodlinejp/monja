@@ -1,2 +1,5 @@
+commentBorder=\#00E000 | \#101020 | null | null | null | null
+commentText=\#00E000 | \#101020 | null | null | null | null
 eclipse.preferences.version=1
+jsp_content=\#D0D0D0 | \#101020 | null | null | null | null
 org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>

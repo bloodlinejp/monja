@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+<entry loc="/Applications/Eclipse.app/Contents/java/10/Home" stamp="1523283813000"/>
+<entry loc="/Applications/Eclipse.app/Contents/java/7/Home" stamp="1480423539000"/>
+<entry loc="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" stamp="1526131797000"/>
+<entry loc="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home" stamp="1428691484000"/>
+<entry loc="/Applications/Eclipse.app/Contents/java/8/Home" stamp="1523284039000"/>
 <entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home" stamp="1459485801000"/>
+<entry loc="/Applications/Eclipse.app/Contents/java/6/Home" stamp="1480423553000"/>
 </dirs>

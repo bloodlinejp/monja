@@ -7,7 +7,7 @@
 		$dsn = 'pgsql:dbname=testdb host=localhost port=5432';
 		$user = 'webapp';
 		$password = 'direct01';
-		
+
 		try{
 			$dbh = new PDO($dsn, $user, $password);
 		}catch (PDOException $e){
@@ -15,22 +15,22 @@
 			die();
 		}
 		$dbh = null;
-		
+
 		try{
 			$dbh = new PDO($dsn, $user, $password);
-			
+
 			print('接続に成功しました。<br>');
 
     		$sql = 'select * from id_master';
-		    foreach ($dbh->query($sql) as $row) {
-        		print($row['id']);
-        		print($row['l_name']);
-        		print($row['f_name']);
-        		print($row['mail_address_1']);
-        		print($row['mail_address_2']);
-        		print($row['phone_number_1'].'<br>');
-    		}
- 
+// 		    foreach ($dbh->query($sql) as $row) {
+//         		print($row['id']);
+//         		print($row['l_name']);
+//         		print($row['f_name']);
+//         		print($row['mail_address_1']);
+//         		print($row['mail_address_2']);
+//         		print($row['phone_number_1'].'<br>');
+//     		}
+
 print<<<EOF
 <br>
 <style type="text/css">
@@ -58,7 +58,7 @@ EOF;
     					"</tr>\n");
     		}
     		print("</table>");
-    		
+
 	}catch (PDOException $e){
 	    print('Error:'.$e->getMessage());
     	die();

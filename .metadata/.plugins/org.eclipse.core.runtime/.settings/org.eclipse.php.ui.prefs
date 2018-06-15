@@ -1,5 +1,27 @@
+cleanup.format.on.save=false
+cleanup.organize.on.save=false
+cleanup.remove_trailing_whitespaces=false
+cleanup.remove_trailing_whitespaces_all=true
+cleanup.remove_trailing_whitespaces_ignore_empty=false
 eclipse.preferences.version=1
+editorColorTask=\#00FF00 | \#101020 | null | null | null | null
 org.eclipse.php.core.workspaceDefaultLocale=ja_JP
+org.eclipse.php.ui.editor.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.php.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.php.ui.wizards.JSsupport=true
+org.eclipse.php.uihoverModifierMasks=org.eclipse.php.ui.editor.hover.BestMatchHover;0;org.eclipse.php.debug.ui.hovers.PHPDebugTextHover;0;org.eclipse.php.xdebug.ui.hover.XDebugTextHover;0;org.eclipse.php.ui.editor.hover.ProblemHover;0;org.eclipse.php.ui.editor.hover.PHPDocumentationHover;0;org.eclipse.php.ui.editor.hover.PHPSourceTextHover;4194304;org.eclipse.php.ui.editor.hover.PHPAnnotationTextHover;0;
+org.eclipse.php.uihoverModifiers=org.eclipse.php.ui.editor.hover.BestMatchHover;0;org.eclipse.php.debug.ui.hovers.PHPDebugTextHover;\!0;org.eclipse.php.xdebug.ui.hover.XDebugTextHover;\!0;org.eclipse.php.ui.editor.hover.ProblemHover;\!0;org.eclipse.php.ui.editor.hover.PHPDocumentationHover;\!0;org.eclipse.php.ui.editor.hover.PHPSourceTextHover;\u30B3\u30DE\u30F3\u30C9;org.eclipse.php.ui.editor.hover.PHPAnnotationTextHover;\!0;
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.ConstantHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.DeprecatedHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.FieldHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.FunctionHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.InternalClassHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.InternalConstantHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.InternalFunctionHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.MethodHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.ParameterVariableHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.StaticFieldHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.StaticMethodHighlighting.enabled=true
+semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.SuperGlobalHighlighting.enabled=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
