@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="642" key="DIALOG_X_ORIGIN"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="467" key="DIALOG_X_ORIGIN"/>
+		<item value="78" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="EditorSelectionDialog">
 		<item value="true" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
@@ -31,8 +31,8 @@
 		<item value="702" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="652" key="DIALOG_HEIGHT"/>
-		<item value="84" key="DIALOG_X_ORIGIN"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="196" key="DIALOG_X_ORIGIN"/>
+		<item value="145" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>

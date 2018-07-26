@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/msgpack-1.2.4/ext/java"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/nio4r-2.3.1/ext/nio4r"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/puma-3.11.4/ext/puma_http11"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/thread_safe-0.3.6/ext"/>
+	<classpathentry kind="src" path="vendor/bundle/ruby/2.5.0/gems/thread_safe-0.3.6/spec/src"/>
+	<classpathentry kind="lib" path="vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/lib/bindex/jruby_internals.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

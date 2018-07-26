@@ -19,11 +19,11 @@
 		<item value="false" key="FilterOnEnv"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.UninstallWizard.WizardSettings">
-		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="712" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
-		<item value="455" key="DIALOG_HEIGHT"/>
-		<item value="578" key="DIALOG_X_ORIGIN"/>
-		<item value="208" key="DIALOG_Y_ORIGIN"/>
+		<item value="598" key="DIALOG_HEIGHT"/>
+		<item value="446" key="DIALOG_X_ORIGIN"/>
+		<item value="35" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.ResolutionResultsPage">
 		<item value="200" key="DetailsSashWeight"/>
@@ -36,7 +36,7 @@
 		<item value="950" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="676" key="DIALOG_HEIGHT"/>
-		<item value="357" key="DIALOG_X_ORIGIN"/>
-		<item value="83" key="DIALOG_Y_ORIGIN"/>
+		<item value="406" key="DIALOG_X_ORIGIN"/>
+		<item value="104" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

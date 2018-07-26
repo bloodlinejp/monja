@@ -1,0 +1,55 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"/usr/bin/clang -o conftest -I/opt/local/include/ruby-2.5.0/x86_64-darwin16 -I/opt/local/include/ruby-2.5.0/ruby/backward -I/opt/local/include/ruby-2.5.0 -I. -I/opt/local/include -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -pipe -Os -fno-common conftest.c  -L. -L/opt/local/lib -L/opt/local/lib -L. -L/opt/local/lib -Wl,-headerpad_max_install_names -fstack-protector -L/opt/local/lib   -arch x86_64   -lruby.2.5.1  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"/usr/bin/clang -E -I/opt/local/include/ruby-2.5.0/x86_64-darwin16 -I/opt/local/include/ruby-2.5.0/ruby/backward -I/opt/local/include/ruby-2.5.0 -I. -I/opt/local/include -I/opt/local/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -pipe -Os -fno-common  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"/usr/bin/clang -E -I/opt/local/include/ruby-2.5.0/x86_64-darwin16 -I/opt/local/include/ruby-2.5.0/ruby/backward -I/opt/local/include/ruby-2.5.0 -I. -I/opt/local/include/ruby-2.5.0/ruby-2.5.1-p57 -pipe -Os -fno-common  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'vm_core.h' file not found
+#include <vm_core.h>
+         ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"/usr/bin/clang -E -I/opt/local/include/ruby-2.5.0/x86_64-darwin16 -I/opt/local/include/ruby-2.5.0/ruby/backward -I/opt/local/include/ruby-2.5.0 -I. -I/Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/debase-ruby_core_source-0.10.3/lib/debase/ruby_core_source/ruby-2.5.1-p57 -pipe -Os -fno-common  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
