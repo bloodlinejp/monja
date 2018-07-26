@@ -1,4 +1,8 @@
 <?php
+//if(!(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')){
+//	die("安全な接続でないため使用できません。");
+//}
+
 if(isset($_POST['bgcolor'])){
 	setcookie('bgcolor', $_POST['bgcolor'], time() + (60 * 60 *24 *7));
 }
