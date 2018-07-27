@@ -4,7 +4,7 @@ $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
 
 // Insert
 $bulk = new MongoDB\Driver\BulkWrite;
-$bulk->insert(['name' => '山田', 'address' => '東京']);
+$bulk->insert(['name' => '田中', 'address' => '大阪', 'tel' => '123-1234-1234']);
 $manager->executeBulkWrite('mytestdb.test', $bulk);
 
 // Select
