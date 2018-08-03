@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="books.xsl" ?>
+<library xml:space="default">
+    <book attr="分類1">
+        <title>Programming PHP</title>
+        <authors>
+            <author>Rasmus Lerdorf</author>
+            <author>Kevin Tatroe</author>
+            <author>Peter MacIntyre</author>
+        </authors>
+        <isbn>1-56592-610-2</isbn>
+        <comment>素晴らしい本です！</comment>
+    </book>
+    <book attr="分類3">
+        <title>PHP Pocket Reference</title>
+        <authors>
+            <author>Rasmus Lerdorf</author>
+        </authors>
+        <isbn>1-56592-769-9</isbn>
+        <comment>本当にポケットに入っちゃいます</comment>
+    </book>
+    <book attr="分類3">
+        <title>Perl Cookbook</title>
+        <authors>
+            <author>Tom Christiansen</author>
+            <author>Nathan Torkington</author>
+        </authors>
+        <isbn>1-56592-243-3</isbn>
+        <comment>役に立つテクニックが満載されています。
+                 PerlだけじゃなくPHPでも応用できるでしょう。</comment>
+    </book>
+</library>

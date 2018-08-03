@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>ありがとう</title>
+	</head>
+
+	<body>
+		<p><font face="helvetica,arial">入力ありがとうございます。{NAME}さん。</font></p>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>ユーザ情報</title>
+	</head>
+
+	<body>
+		<p><font face="helvetica,arial">以下の情報を入力してください。</font></p>
+	
+		<form action="{DESTINATION}">
+			<table>
+				<tr>
+					<td>名前</td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>
