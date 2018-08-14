@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::get('/foo', function () {
     return 'Hello World!';
 });
+
+Route::get('/g', function () {
+    return view('greeting', ['name' => 'James']);
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/action-items', 'ActionitemsController@index');
