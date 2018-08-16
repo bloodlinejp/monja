@@ -11,20 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/foo', function () {
-    return 'Hello World!';
-});
-
-Route::get('/g', function () {
-    return view('greeting', ['name' => 'James']);
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/action-items', 'ActionitemsController@index');
+Route::resource('action-items', 'ActionitemsController');

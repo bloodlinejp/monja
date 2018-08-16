@@ -1,5 +1,5 @@
 @php
-  $title = __('Actionitems');
+  $title = __('actionitems.Actionitems');
 @endphp
 @extends('layouts.app')
 @section('content')
@@ -9,18 +9,19 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>{{ __('ID') }}</th>
-          <th>{{ __('User_ID') }}</th>
-          <th>{{ __('Index1Text') }}</th>
-          <th>{{ __('Index2Text') }}</th>
-          <th>{{ __('Index2Use') }}</th>
-          <th>{{ __('Index3Text') }}</th>
-          <th>{{ __('Index3Use') }}</th>
-          <th>{{ __('From') }}</th>
-          <th>{{ __('To') }}</th>
-          <th>{{ __('Text') }}</th>
-          <th>{{ __('value') }}</th>
-          <th>{{ __('Checkbox') }}</th>
+          <th>{{ __('actionitems.ID') }}</th>
+          <th>{{ __('actionitems.User_ID') }}</th>
+          <th>{{ __('actionitems.Index1Text') }}</th>
+          <th>{{ __('actionitems.Index2Text') }}</th>
+          <th>{{ __('actionitems.Index2Use') }}</th>
+          <th>{{ __('actionitems.Index3Text') }}</th>
+          <th>{{ __('actionitems.Index3Use') }}</th>
+          <th>{{ __('actionitems.From') }}</th>
+          <th>{{ __('actionitems.To') }}</th>
+          <th>{{ __('actionitems.Text') }}</th>
+          <th>{{ __('actionitems.Lines') }}</th>
+          <th>{{ __('actionitems.Value') }}</th>
+          <th>{{ __('actionitems.Checkbox') }}</th>
         </tr>
       </thead>
       <tbody>
@@ -30,14 +31,50 @@
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->user_id }}</a></td>
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index1text }}</a></td>
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index2text }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index2use }}</a></td>
+            <td><input type="checkbox"
+              @if ($actionitem->index2use == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index3text }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index3use }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->from }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->to }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->text }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->value }}</a></td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->checkbox }}</a></td>
+            <td><input type="checkbox"
+              @if ($actionitem->index3use == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
+            <td><input type="checkbox"
+              @if ($actionitem->from == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
+            <td><input type="checkbox"
+              @if ($actionitem->to == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
+            <td><input type="checkbox"
+              @if ($actionitem->text == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
+            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->lines }}</a></td>
+            <td><input type="checkbox"
+              @if ($actionitem->value == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
+            <td><input type="checkbox"
+              @if ($actionitem->checkbox == 1)
+                checked="checked"
+              @endif
+              >
+            </td>
           </tr>
         @endforeach
       </tbody>
