@@ -79,41 +79,17 @@
   </dl>
   <!-- 編集・削除ボタン -->
   <div>
-    <a href="{{ url('action-items/'.$actionitem->id.'/destroy') }}" class="btn btn-danger">
-      {{ __('actionitems.Delete') }}
+    <a href="{{ url('action-items') }}" class="btn btn-success">
+      {{ __('actionitems.ReturnToList') }}
     </a>
+    <!-- 削除ボタンのコンポーネント -->
+    @component('components.btn-del-confirm')
+      @slot('table', 'action-items')
+      @slot('id', $actionitem->id)
+    @endcomponent
     <a href="{{ url('action-items/'.$actionitem->id.'/edit') }}" class="btn btn-primary">
       {{ __('actionitems.Edit') }}
     </a>
-    <!-- 1.モーダル表示のためのボタン -->
-    <button class="btn btn-primary" data-toggle="modal" data-target="#modal-example">
-        モーダルダイアログ表示
-    </button>
-
-    <!-- 2.モーダルの配置 -->
-    <div class="modal" id="modal-example" tabindex="-1">
-        <div class="modal-dialog"> 
-            <!-- 3.モーダルのコンテンツ -->
-            <div class="modal-content">
-                <!-- 4.モーダルのヘッダ -->
-                <div class="modal-header">
-                    <h4 class="modal-title" id="modal-label">ダイアログ</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <!-- 5.モーダルのボディ -->
-                <div class="modal-body">
-                    ここに内容を書く
-                </div>
-                <!-- 6.モーダルのフッタ -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                    <button type="button" class="btn btn-primary">保存</button>
-                </div>
-            </div>
-        </div>
-    </div>
   </div>
 </div>
 @endsection

@@ -17,4 +17,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// 活動項目
 Route::resource('action-items', 'ActionitemsController');
+
+// 日次活動内容
+Route::resource('actions', 'ActionsController');

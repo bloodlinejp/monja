@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Actionitem;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Actionitem;
 
 class ActionitemsController extends Controller
 {
@@ -78,8 +78,9 @@ class ActionitemsController extends Controller
   public function show($id)
   {
     $user_id = Auth::id();
+		$actionitem = Actionitem::where('user_id', $user_id)->findOrFail($id);
 
-    return view('action-items.show', ['actionitem' => Actionitem::where('user_id', $user_id)->findOrFail($id)]);
+    return view('action-items.show', ['actionitem' => $actionitem]);
   }
 
   /**
@@ -91,8 +92,9 @@ class ActionitemsController extends Controller
   public function edit($id)
   {
     $user_id = Auth::id();
+		$actionitem = Actionitem::where('user_id', $user_id)->findOrFail($id);
 
-    return view('action-items.edit', ['actionitem' => Actionitem::where('user_id', $user_id)->findOrFail($id)]);
+    return view('action-items.edit', ['actionitem' => $actionitem]);
   }
 
   /**
@@ -131,9 +133,11 @@ class ActionitemsController extends Controller
    */
   public function destroy($id)
   {
-    Actionitem::destroy($id);
-
     $user_id = Auth::id();
+
+    $actionitem = Actionitem::where('user_id', $user_id)->findOrFail($id);
+    $actionitem->delete();
+
     $actionitems = Actionitem::where('user_id', $user_id)->get();
     return view('action-items.index', ['actionitems' => $actionitems]);
   }

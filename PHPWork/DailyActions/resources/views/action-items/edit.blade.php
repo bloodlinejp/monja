@@ -18,8 +18,8 @@
         @if ($actionitem->index2use == 1)
           checked="checked"
           @endif
-      autofocus>
-      <input id="index2text" type="text" class="form-control" name="index2text" value="{{ $actionitem->index2text }}" autofocus>
+      >
+      <input id="index2text" type="text" class="form-control" name="index2text" value="{{ $actionitem->index2text }}" >
     </div>
     <div class="form-group">
       <label for="index3text">{{__('actionitems.Index3Text') }}</label>
@@ -27,8 +27,8 @@
         @if ($actionitem->index3use == 1)
           checked="checked"
         @endif
-       autofocus> 
-      <input id="index3text" type="text" class="form-control" name="index3text" value="{{ $actionitem->index3text }}" autofocus>
+       > 
+      <input id="index3text" type="text" class="form-control" name="index3text" value="{{ $actionitem->index3text }}" >
     </div>
     <div class="form-group">
       <label for="from">{{__('actionitems.From') }}</label>
@@ -36,7 +36,7 @@
         @if ($actionitem->from == 1)
           checked="checked"
         @endif
-       autofocus> 
+       > 
     </div>
     <div class="form-group">
       <label for="to">{{__('actionitems.To') }}</label>
@@ -44,7 +44,7 @@
         @if ($actionitem->to == 1)
           checked="checked"
         @endif
-       autofocus> 
+       > 
     </div>
     <div class="form-group">
       <label for="text">{{__('actionitems.Text') }}</label>
@@ -52,11 +52,11 @@
         @if ($actionitem->text== 1)
           checked="checked"
         @endif
-       autofocus> 
+       > 
     </div>
     <div class="form-group">
       <label for="lines">{{__('actionitems.Lines') }}</label>
-      <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}" autofocus>
+      <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}" >
     </div>
     <div class="form-group">
       <label for="value">{{__('actionitems.Value') }}</label>
@@ -64,7 +64,7 @@
         @if ($actionitem->value== 1)
           checked="checked"
         @endif
-       autofocus> 
+       > 
     </div>
     <div class="form-group">
       <label for="checkbox">{{__('actionitems.Checkbox') }}</label>
@@ -72,7 +72,7 @@
         @if ($actionitem->checkbox== 1)
           checked="checked"
         @endif
-       autofocus> 
+       > 
     </div>
     <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
     <button type="reset" name="reset" class="btn btn-primary">{{ __('actionitems.Reset') }}</button>

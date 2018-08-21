@@ -18,8 +18,8 @@ return [
   'Edit'         => '編集',
   'Delete'       => '削除',
 
-  'Actionitem'  => '項目',
-  'Actionitems' => '項目一覧',
+  'Actionitem'  => '活動項目',
+  'Actionitems' => '活動項目一覧',
   'CreateActionitem' => '新規登録',
   'EditActionitem' => '編集',
   'ID'          => 'ID',
