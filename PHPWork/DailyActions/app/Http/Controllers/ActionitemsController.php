@@ -53,6 +53,7 @@ class ActionitemsController extends Controller
 
     $actionitem = new Actionitem;
     $actionitem->user_id = $user_id;
+    $actionitem->order = $order;
     $actionitem->index1text = $request->input('index1text');
     $actionitem->index2text = $request->input('index2text');
     $actionitem->index2use = $request->input('index2use', 0);
@@ -109,6 +110,7 @@ class ActionitemsController extends Controller
     $user_id = Auth::id();
     $actionitem = Actionitem::where('user_id', $user_id)->findOrFail($id);
 
+    $actionitem->order = $request->input('order');
     $actionitem->index1text = $request->input('index1text');
     $actionitem->index2text = $request->input('index2text');
     $actionitem->index2use = $request->input('index2use', 0);

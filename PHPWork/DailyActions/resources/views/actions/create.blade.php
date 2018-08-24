@@ -9,9 +9,11 @@
     @csrf
     @method('POST')
     @foreach ($actionitems as $actionitem)
+      <input type="hidden" name="actions[{{ $actionitem->id }}][date]" value="{{ $today }}">
       <div class="form-group">
         <div class="row">
           <div class="col-sm-4">
+            <input type="hidden" name="actions[{{ $actionitem->id }}][actionitem_id]" value="{{ $actionitem->id }}">
             <label for="index1" class="h3 control-label">{{ $actionitem->index1text }}</label>
             @if ($actionitem->index2use)
               <label for="index2" class="h5 control-label">{{ $actionitem->index2text }}</label>
@@ -23,25 +25,25 @@
           <div class="col-sm-8">
             <div class="row">
               @if ($actionitem->from)
-                <input id="from" type="text" class="col-sm-2 form-control" name="from" autofocus>
+                <input id="from" type="text" class="col-sm-2 form-control inpt-sm" name="actions[{{ $actionitem->id }}][from]" autofocus>
               @endif
               @if ($actionitem->to)
                 <div class="col-sm-1">
                   <label class="control-label">〜</label>
                 </div>
-                <input id="to" type="text" class="col-sm-2 form-control" name="to">
+                <input id="to" type="text" class="col-sm-2 form-control input-sm" name="actions[{{ $actionitem->id }}][to]" autofocus>
               @endif
               @if ($actionitem->text)
-                <textarea id="text" type="text" class="col-sm-7 form-control" name="textarea" rows="{{ $actionitem->lines }}">
+                <textarea id="text" type="text" class="col-sm-7 form-control input-sm" name="actions[{{ $actionitem->id }}][text]" rows="{{ $actionitem->lines }}" autofocus>
                   {{ $actionitem->text1text }}
                 </textarea>
               @endif
               @if ($actionitem->value)
-                <input id="value" type="text" class="col-sm-1 form-control" name="value">
+                <input id="value" type="text" class="col-sm-1 form-control input-sm" name="actions[{{ $actionitem->id }}][value]" autofocus>
               @endif
               @if ($actionitem->checkbox)
                 <label>
-                  <input id="checkbox" type="checkbox" class="form-control" name="checkbox">
+                  <input id="checkbox" type="checkbox" value="1" class="form-control" name="actions[{{ $actionitem->id }}][checkbox]" autofocus>
                 </label>
               @endif
             </div>

@@ -7,16 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Action extends Model
 {
   // 活動記録モデル
-	protected $table = 'actions';
+  protected $table = 'actions';
 
-	function actionitem()
-	{
-		return $this->belongsTo('App\Models\Actionitem');
-	}
+  // ユーザ追加不可カラム
+  // ユーザID
+  protected $guarded = ['user_id'];
 
-	function user()
-	{
-		return $this->belongsTo('App\User');
-	}
+  function actionitem()
+  {
+    return $this->belongsTo('App\Models\Actionitem');
+  }
+
+  function user()
+  {
+    return $this->belongsTo('App\User');
+  }
 
 }

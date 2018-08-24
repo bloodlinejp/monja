@@ -9,8 +9,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>{{ __('actionitems.ID') }}</th>
-          <th>{{ __('actionitems.User_ID') }}</th>
+          <th>{{ __('actionitems.Order') }}</th>
           <th>{{ __('actionitems.Index1Text') }}</th>
           <th>{{ __('actionitems.Index2Text') }}</th>
           <th>{{ __('actionitems.Index2Use') }}</th>
@@ -27,8 +26,7 @@
       <tbody>
         @foreach ($actionitems as $actionitem)
           <tr>
-            <td>{{ $actionitem->id }}</td>
-            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->user_id }}</a></td>
+            <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->order }}</a></td>
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index1text }}</a></td>
             <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index2text }}</a></td>
             <td><input type="checkbox"

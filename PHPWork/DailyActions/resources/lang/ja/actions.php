@@ -10,5 +10,7 @@ return [
   */
 
   'EditAction'       => '活動記録',
+	'Reset'            => 'リセット',
+	'Submit'           => '登録',
 
 ];

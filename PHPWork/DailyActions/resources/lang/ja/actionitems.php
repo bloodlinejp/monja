@@ -24,6 +24,7 @@ return [
   'EditActionitem' => '編集',
   'ID'          => 'ID',
   'User_ID'     => 'ユーザーID',
+  'Order'        => '表示順序',
   'Index1Text'  => '大見出し文言',
   'Index2Text'  => '中見出し文言',
   'Index2Use'   => '中見出し使用設定',

@@ -8,10 +8,8 @@
 
   <!-- 項目１件の情報 -->
   <dl class="row">
-    <dt class="col-md-2">{{ __('actionitems.ID') }}</dt>
-    <dd class="col-md-10">{{ $actionitem->id }}</dd>
-    <dt class="col-md-2">{{ __('actionitems.User_ID') }}</dt>
-    <dd class="col-md-10">{{ $actionitem->user_id }}</dd>
+    <dt class="col-md-2">{{ __('actionitems.Order') }}</dt>
+    <dd class="col-md-10">{{ $actionitem->order }}</dd>
     <dt class="col-md-2">{{ __('actionitems.Index1Text') }}</dt>
     <dd class="col-md-10">{{ $actionitem->index1text }}</dd>
     <dt class="col-md-2">{{ __('actionitems.Index2Text') }}</dt>
