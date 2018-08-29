@@ -16,14 +16,19 @@ class ActionsController extends Controller
 
   }
 
+  /**
+   * 活動内容表示
+   *
+   * @return \Illuminate\Http\Response
+   */
   public function index()
   {
-    $today = date('Y-m-d');
+    $date = date('Y-m-d', time());
     $user_id = Auth::id();
 
     $actions = Action::where('user_id', $user_id)
       ->orderBy('order', 'ASC')
-      ->where('date', $today)
+      ->where('date', $date)
       ->get();
 
     if ($actions->isEmpty()) {
@@ -31,20 +36,40 @@ class ActionsController extends Controller
       // 存在しないl場合、項目マスタ新規作成画面を表示
 
       $actionitems = Actionitem::where('user_id', $user_id)->get();
+      $actionitems = $actionitems->sortBy('order');
 
       if ($actionitems->isEmpty()) {
         return view('action-items.create');
       }
       else {
-        return view('actions.create', compact('actionitems', 'today'));
+        return view('actions.create', compact('actionitems', 'date'));
       }
     }
     else
     {
       // 本日に登録がある場合、編集画面を出力
-      return view('actions.edit', compact('actions', 'today'));
+      return view('actions.edit', compact('actions', 'date'));
     }
   }
+
+  /**
+   *活動内容表示
+   *
+   * @param  \Illuminate\Http\Request  $date
+   * @return \Illuminate\Http\Response
+   */
+  public function edit($date)
+  {
+    $user_id = Auth::id();
+
+    $actions = Action::where('user_id', $user_id)
+      ->orderBy('order', 'ASC')
+      ->where('date', $date)
+      ->get();
+
+    return view('actions.edit', compact('actions', 'date'));
+  }
+
 
   /**
    * 新規日次活動内容保存
@@ -76,11 +101,22 @@ class ActionsController extends Controller
     $i = 0;
 
     foreach ($postdata['actions'] as $action) {
-      //dd($action);
+      if (isset($action['from-hour']) and isset($action['from-minute'])) {
+        $action['from'] = $action['from-hour'] . ':' . $action['from-minute'];
+      }
+      unset($action['from-hour']);
+      unset($action['from-minute']);
+
+      if (isset($action['to-hour']) and isset($action['to-minute'])) {
+        $action['to'] = $action['to-hour'] . ':' . $action['to-minute'];
+      }
+      unset($action['to-hour']);
+      unset($action['to-minute']);
+
       $insertdata[$i] = $action + $base;
-      $i = $i +1;
+
+      $i = $i + 1;
     }
-//    dd($insertdata);
     Action::insert($insertdata);
     return redirect('actions');
   }
@@ -92,17 +128,27 @@ class ActionsController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request)
+  public function update(Request $request, $date)
   {
-
     $postdata = $request->all();
-    // dd($postdata['actions']);
     foreach ($postdata['actions'] as $id => $values) {
+    //dd($values);
+      if (isset($values['from-hour']) and isset($values['from-minute'])) {
+        $values['from'] = $values['from-hour'] . ':' . $values['from-minute'];
+      }
+      unset($values['from-hour']);
+      unset($values['from-minute']);
+
+      if (isset($values['to-hour']) and isset($values['to-minute'])) {
+        $values['to'] = $values['to-hour'] . ':' . $values['to-minute'];
+      }
+      unset($values['to-hour']);
+      unset($values['to-minute']);
 
       Action::find($id)->update($values);
 
     }
-    return redirect('/');
+    return redirect('actions/' . $date . '/edit');
   }
 
 }

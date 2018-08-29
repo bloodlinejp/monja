@@ -10,7 +10,13 @@
     @method('PUT')
     <div class="form-group">
       <label for="order">{{__('actionitems.Order') }}</label>
-      <input id="order" type="text" class="form-control" name="order" value="{{ $actionitem->order }}">
+      @component('components.select-number', [
+        'min' => 1,
+        'max' => $max,
+        'selected' => $actionitem->order,
+        ])
+        @slot('name', 'order')
+      @endcomponent
     </div>
     <div class="form-group">
       <label for="index1text">{{__('actionitems.Index1Text') }}</label>

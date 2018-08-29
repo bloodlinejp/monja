@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // 活動項目
+Route::post('action-items/listupdate', 'ActionitemsController@listupdate');
 Route::resource('action-items', 'ActionitemsController');
 
 // 日次活動内容

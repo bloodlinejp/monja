@@ -16,6 +16,7 @@ return [
   'Reset'        => 'クリア',
   'Submit'       => '登録',
   'Edit'         => '編集',
+  'Update'       => '更新',
   'Delete'       => '削除',
 
   'Actionitem'  => '活動項目',

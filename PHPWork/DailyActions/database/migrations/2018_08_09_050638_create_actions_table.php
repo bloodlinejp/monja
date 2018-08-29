@@ -15,13 +15,15 @@ class CreateActionsTable extends Migration
     {
         Schema::create('actions', function (Blueprint $table) {
             $table->increments('id')->comment('主キー');
+            $table->unsignedInteger('user_id')->comment('ユーザID');
             $table->date('date')->comment('活動日');
-            $table->integer('actionitem_id')->comment('項目番号');
-            $table->time('from')->comment('時刻From');
-            $table->time('to')->comment('時刻To');
-            $table->string('text', 255)->comment('文字列');
-            $table->decimal('value', 8, 2)->comment('数値');
-            $table->boolean('checkbox')->comment('チェックボックス');
+            $table->unsignedInteger('order')->nullable()->comment('表示順序');
+            $table->unsignedInteger('actionitem_id')->comment('項目番号');
+            $table->time('from')->nullable()->comment('時刻From');
+            $table->time('to')->nullable()->comment('時刻To');
+            $table->string('text', 255)->nullable()->comment('文字列');
+            $table->decimal('value', 8, 2)->nullable()->comment('数値');
+            $table->boolean('checkbox')->nullable()->comment('チェックボックス');
             $table->timestamps();
         });
     }

@@ -9,8 +9,14 @@
     @csrf
     @method('POST')
     <div class="form-group">
-          <label for="order">{{__('actionitems.Order') }}</label>
-          <input class="form-control" id="order" type="text" name="order">
+      <label for="order">{{__('actionitems.Order') }}</label>
+      @component('components.select-number', [
+        'min' => 1,
+        'max' => ($max > 9) ? $max + 1 : 10,
+        'selected' => '',
+        ])
+        @slot('name', 'order')
+      @endcomponent
     </div>
     <div class="form-group">
           <label for="index1text">{{__('actionitems.Index1Text') }}</label>
