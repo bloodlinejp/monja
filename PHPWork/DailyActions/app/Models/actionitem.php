@@ -11,4 +11,11 @@ class Actionitem extends Model
 
   //ユーザ追加不可カラム
   protected $guarded = ['user_id'];
+
+  public function action()
+  {
+    return $this->hasMany('App\Models\Action');
+  }
+
 }
+

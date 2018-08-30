@@ -1,6 +1,3 @@
-@php
-  $title = $date;
-@endphp
 @extends('layouts.app')
 @section('content')
 <div class="container">
@@ -12,7 +9,7 @@
       @slot('name', 'date')
     @endcomponent
   </h1>
-  <form action="{{ url('actions') }}/{{ $date }}" method="post" >
+  <form action="{{ url('actions/'.$date) }}" method="post" >
     @csrf
     @method('PUT')
     @foreach ($actions as $action)

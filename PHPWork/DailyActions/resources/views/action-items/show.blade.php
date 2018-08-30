@@ -6,7 +6,7 @@
 <div class="container">
   <h1>{{ $title }}</h1>
 
-  <!-- 項目１件の情報 -->
+  <!-- 1項目の情報 -->
   <dl class="row">
     <dt class="col-md-2">{{ __('actionitems.Order') }}</dt>
     <dd class="col-md-10">{{ $actionitem->order }}</dd>

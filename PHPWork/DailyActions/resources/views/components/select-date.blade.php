@@ -1,4 +1,4 @@
-<select name="{{ $name }}">
+<select class="custom-select custom-select-lg" name="{{ $name }}">
   @if ($selected == '')
   <option value="" selected="selected">
   @endif

@@ -27,16 +27,17 @@ class ActionsController extends Controller
     $user_id = Auth::id();
 
     $actions = Action::where('user_id', $user_id)
-      ->orderBy('order', 'ASC')
       ->where('date', $date)
+      ->orderBy('order', 'ASC')
       ->get();
 
     if ($actions->isEmpty()) {
       // 本日に登録がない場合、項目マスタの有無をチェック
       // 存在しないl場合、項目マスタ新規作成画面を表示
 
-      $actionitems = Actionitem::where('user_id', $user_id)->get();
-      $actionitems = $actionitems->sortBy('order');
+      $actionitems = Actionitem::where('user_id', $user_id)
+        ->orderBy('order', 'ASC')
+        ->get();
 
       if ($actionitems->isEmpty()) {
         return view('action-items.create');
@@ -67,7 +68,26 @@ class ActionsController extends Controller
       ->where('date', $date)
       ->get();
 
-    return view('actions.edit', compact('actions', 'date'));
+    if ($actions->isEmpty()) {
+      // 本日に登録がない場合、項目マスタの有無をチェック
+      // 存在しないl場合、項目マスタ新規作成画面を表示
+
+      $actionitems = Actionitem::where('user_id', $user_id)
+        ->orderBy('order', 'ASC')
+        ->get();
+
+      if ($actionitems->isEmpty()) {
+        return view('action-items.create');
+      }
+      else {
+        return view('actions.create', compact('actionitems', 'date'));
+      }
+    }
+    else
+    {
+      // 本日に登録がある場合、編集画面を出力
+      return view('actions.edit', compact('actions', 'date'));
+    }
   }
 
 
@@ -118,7 +138,7 @@ class ActionsController extends Controller
       $i = $i + 1;
     }
     Action::insert($insertdata);
-    return redirect('actions');
+    return redirect('actions/' . $action['date'] . '/edit');
   }
 
 
