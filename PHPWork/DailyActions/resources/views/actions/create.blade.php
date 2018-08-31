@@ -25,11 +25,11 @@
     @if ($index !== $actionitem->index1text)
       @if (!($actionitem->index3use || $actionitem->index2use))
       <div class="col-sm-5">
-        <label for="index1" class="h4">{{ $actionitem->index1text }}</label>
+        <h3><span class="badge badge-success">{{ $actionitem->index1text }}</span></h3>
       </div>
       @else
       <div class="col-sm-12">
-        <label for="index1" class="h4">{{ $actionitem->index1text }}</label>
+        <h3><span class="badge badge-success">{{ $actionitem->index1text }}</span></h3>
       </div>
     </div>
     <div class="form-row mb-2">
@@ -113,7 +113,7 @@
       </div>
     </div>
     @endforeach
-    <button type="reset" name="reset" class="btn btn-primary">{{ __('actions.Reset') }}</button>
+    <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actions.Reset') }}</button>
     <button type="submit" name="submit" class="btn btn-primary">{{ __('actions.Submit') }}</button>
   </form>
 </div>
