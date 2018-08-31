@@ -5,11 +5,11 @@
 @section('content')
 <div class="container">
   <h1>{{ $title }}</h1>
-  <div class="table-responsive">
+  <div class="table-responsive text-nowrap">
   <form action="{{ url('action-items') }}/listupdate" method="post" >
     @csrf
     @method('POST')
-      <table class="table table-striped">
+      <table class="table table-striped table-hover">
         <thead>
           <tr>
             <th>{{ __('actionitems.Order') }}</th>
@@ -40,8 +40,8 @@
                   @endslot
                 @endcomponent
               </td>
-              <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index1text }}</a></td>
-              <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index2text }}</a></td>
+              <td><a href="{{ url('action-items/'.$actionitem->id).'/edit' }}">{{ $actionitem->index1text }}</a></td>
+              <td><a href="{{ url('action-items/'.$actionitem->id).'/edit' }}">{{ $actionitem->index2text }}</a></td>
               <td>
                 <input type="hidden" name="actionitems[{{ $actionitem->id }}][index2use]" value="0">
                 <input type="checkbox" name="actionitems[{{ $actionitem->id }}][index2use]" value="1"
@@ -50,7 +50,7 @@
                 @endif
                 >
               </td>
-              <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->index3text }}</a></td>
+              <td><a href="{{ url('action-items/'.$actionitem->id).'/edit' }}">{{ $actionitem->index3text }}</a></td>
               <td>
                 <input type="hidden" name="actionitems[{{ $actionitem->id }}][index3use]" value="0">
                 <input type="checkbox" name="actionitems[{{ $actionitem->id }}][index3use]" value="1"
@@ -83,7 +83,7 @@
                   @endif
                 >
               </td>
-              <td><a href="{{ url('action-items/'.$actionitem->id) }}">{{ $actionitem->lines }}</a></td>
+              <td><a href="{{ url('action-items/'.$actionitem->id).'/edit' }}">{{ $actionitem->lines }}</a></td>
               <td>
                 <input type="hidden" name="actionitems[{{ $actionitem->id }}][value]" value="0">
                 <input type="checkbox" name="actionitems[{{ $actionitem->id }}][value]" value="1"

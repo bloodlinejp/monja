@@ -10,7 +10,7 @@
         <div class="modal-content">
             <!-- 4.モーダルのヘッダ -->
             <div class="modal-header">
-                <h4 class="modal-title" id="modal-label">確認ダイアログ</h4>
+                <h4 class="modal-title" id="modal-label">確認</h4>
                 <button type="button" class="close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
