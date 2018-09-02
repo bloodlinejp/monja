@@ -109,7 +109,7 @@
       <button type="submit" name="submit" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
     </div>
   </form>
-  <div class="float-right">
+  <div class="float-right mb-4">
     @component('components.btn-del-confirm')
       @slot('table', 'action-items')
       @slot('id', $actionitem->id)

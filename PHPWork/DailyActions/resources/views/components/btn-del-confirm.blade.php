@@ -26,7 +26,7 @@
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">
-                        {{ __('actionitems.Delete') }}
+                        {{ __('dailyactions.Delete') }}
                     </button>
                 </form>
             </div>

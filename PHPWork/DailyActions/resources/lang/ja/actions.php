@@ -10,7 +10,8 @@ return [
   */
 
   'EditAction'       => '活動記録',
-	'Reset'            => 'クリア',
-	'Submit'           => '登録',
+  'EditTodaysAction' => '活動記録（本日）',
+  'Reset'            => 'クリア',
+  'Submit'           => '登録',
 
 ];

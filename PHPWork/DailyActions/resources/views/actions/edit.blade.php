@@ -68,8 +68,8 @@
                 </div>
                 @endif
                 @if ($action->actionitem->value)
-                <div>
-                  <input id="value" type="text" class="col-sm-1 form-control form-control-sm mt-1" name="actions[{{ $action->id }}][value]" value="{{ $action->value }}">
+                <div class="mr-4">
+                  <input id="value" type="text" class="form-control form-control-sm" name="actions[{{ $action->id }}][value]" value="{{ $action->value }}">
                 </div>
                 @endif
                 @if ($action->actionitem->to)
@@ -150,7 +150,7 @@
       <button type="submit" name="submit" class="btn btn-primary">{{ __('actions.Submit') }}</button>
     </div>
   </form>
-  <div class="float-right">
+  <div class="float-right mb-4">
     @component('components.btn-del-confirm')
       @slot('table', 'actions')
       @slot('id', $date)

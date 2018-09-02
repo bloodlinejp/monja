@@ -36,7 +36,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        @guest
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="@"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ __('dailyactions.Manage') }}<span class="caret"></span>
+                                </a>
 
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ url('actions') }}">{{ __('actions.EditTodaysAction') }}</a>
+                                    <a class="dropdown-item" href="{{ url('action-items/create') }}">{{ __('actionitems.CreateActionitem') }}</a>
+                                    <a class="dropdown-item" href="{{ url('action-items') }}">{{ __('actionitems.Actionitems') }}</a>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -44,10 +60,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('actionitems.Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('dailyactions.Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('actionitems.Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('dailyactions.Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -56,9 +72,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('actions') }}">{{ __('actions.EditAction') }}</a>
-                                    <a class="dropdown-item" href="{{ url('action-items') }}">{{ __('actionitems.Actionitems') }}</a>
-                                    <a class="dropdown-item" href="{{ url('action-items/create') }}">{{ __('actionitems.CreateActionitem') }}</a>
+                                    <a class="dropdown-item" href="{{ url('home') }}">{{ __('dailyactions.Home') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
