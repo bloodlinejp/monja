@@ -5,12 +5,12 @@
 @section('content')
 <div class="container">
   <h1>{{ $title }}</h1>
-  <div class="text-nowrap">
+  <div class="table-responsive text-nowrap">
   <form action="{{ url('action-items') }}/listupdate" method="post" >
     @csrf
     @method('POST')
-      <table class="table table-responsive table-striped table-hover">
-        <thead class="text-white bg-success">
+      <table class="table table-striped table-hover">
+        <thead class="table-primary">
           <tr>
             <th>{{ __('actionitems.Order') }}</th>
             <th>{{ __('actionitems.Index1Text') }}</th>

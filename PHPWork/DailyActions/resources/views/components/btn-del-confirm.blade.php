@@ -17,7 +17,7 @@
             </div>
             <!-- 5.モーダルのボディ -->
             <div class="modal-body">
-                削除してよろしいですか？
+                削除してもよろしいですか？
             </div>
             <!-- 6.モーダルのフッタ -->
             <div class="modal-footer">

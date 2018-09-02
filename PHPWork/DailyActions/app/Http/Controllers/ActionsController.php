@@ -40,7 +40,9 @@ class ActionsController extends Controller
         ->get();
 
       if ($actionitems->isEmpty()) {
-        return view('action-items.create');
+        $max = $actionitems->max('order') < $actionitems->count() ? $actionitems->count() : $actionitems->max('order');
+
+        return view('action-items.create', compact('max'));
       }
       else {
         return view('actions.create', compact('actionitems', 'date'));
@@ -170,5 +172,26 @@ class ActionsController extends Controller
     }
     return redirect('actions/' . $date . '/edit');
   }
+
+  /**
+   * 活動削除
+   *
+   * @param  App\Models\Action  $action
+   * @return \Illuminate\Http\Response
+   */
+  public function destroy($date)
+  {
+    $user_id = Auth::id();
+
+    $action = Action::where('user_id', $user_id)->where('date', $date);
+    $action->delete();
+
+    $actionitems = Actionitem::where('user_id', $user_id)
+      ->orderBy('order', 'ASC')
+      ->get();
+
+    return view('actions.create', compact('actionitems', 'date'));
+  }
+
 
 }

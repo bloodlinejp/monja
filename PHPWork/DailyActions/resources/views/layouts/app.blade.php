@@ -24,7 +24,7 @@
 </head>
 <body style="padding-top:4.5rem;">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top navbar-dailyactions">
             <div class="container">
                 <a class="navbar-brand"  style="font-size: 1.5rem" href="{{ url('/') }}">
                     {{ config('app.name') }}
