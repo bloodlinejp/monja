@@ -1,0 +1,9 @@
+# Use default MacPorts settings
+!include /opt/local/etc/mysql56/macports-default.cnf
+
+# User Settings
+[mysqld]
+innodb_large_prefix = ON
+innodb_file_per_table = ON
+innodb_file_format = Barracuda
+innodb_file_format_max = Barracuda
