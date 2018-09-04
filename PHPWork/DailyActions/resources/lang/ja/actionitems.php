@@ -12,7 +12,7 @@ return [
   'Logout'      => 'ログアウト',
   'Register'    => 'ユーザー登録',
 
-  'ReturnToList' => '一覧へ戻る',
+  'ReturnToList' => '活動項目一覧',
   'Reset'        => 'クリア',
   'Submit'       => '登録',
   'Edit'         => '編集',

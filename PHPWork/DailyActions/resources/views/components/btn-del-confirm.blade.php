@@ -4,7 +4,7 @@
 </button>
 
 <!-- 2.モーダルの配置 -->
-<div class="modal" id="del-confirmation" tabindex="-1">
+<div class="modal fade" id="del-confirmation" tabindex="-1">
     <div class="modal-dialog"> 
         <!-- 3.モーダルのコンテンツ -->
         <div class="modal-content">
