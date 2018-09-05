@@ -1,6 +1,6 @@
 <select class="custom-select custom-select-lg" name="{{ $name }}">
   @if ($selected == '')
-  <option value="" selected="selected">
+  <option value="" selected="selected"></option>
   @endif
     @for ($i = 0; $i < $days + 1; $i++)
     @php

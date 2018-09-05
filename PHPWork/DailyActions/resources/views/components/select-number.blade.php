@@ -1,6 +1,6 @@
 <select name="{{ $name }}">
 @if ($selected == '')
-  <option value="" selected="selected">
+  <option value="" selected="selected"></option>
 @endif
 @for ($i = $min; $i < $max + 1; $i++)
   <option value="{{ $i }}"
