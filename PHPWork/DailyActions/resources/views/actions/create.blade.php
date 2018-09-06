@@ -64,7 +64,7 @@
               @endif
               @if ($actionitem->value)
                 <div class="mr-4">
-                  <input id="value" type="text" class="form-control form-control-sm" name="actions[{{ $actionitem->id }}][value]">
+                  <input id="value" type="number" step="0.01" class="form-control form-control-sm" name="actions[{{ $actionitem->id }}][value]">
                 </div>
               @endif
               @if ($actionitem->to)
