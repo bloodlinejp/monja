@@ -1,3 +1,5 @@
+//actions Viewで使用するJS
+
 $(function () {
   $('select[name=date]').change(function() {
     if ($(this).val() != "") {

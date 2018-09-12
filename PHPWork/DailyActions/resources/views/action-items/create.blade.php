@@ -77,7 +77,7 @@
     </div>
     <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
     <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actionitems.Reset') }}</button>
-    <button type="submit" name="submit" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
+    <button type="submit" name="submit" id="action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
   </form>
 </div>
 @endsection
