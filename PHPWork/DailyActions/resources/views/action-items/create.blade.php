@@ -22,6 +22,7 @@
     </div>
     <div class="form-group">
       <label for="index1text">{{__('actionitems.Index1Text') }}</label>
+      <span class="badge badge-info ml-2">必須</span>
       <input class="form-control" id="index1text" type="text" name="index1text" required autofocus>
     </div>
     <div class="form-group">
@@ -45,19 +46,25 @@
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="from" type="checkbox" name="from" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="from">{{__('actionitems.From') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="from">{{__('actionitems.From') }}
+          <span class="rel badge badge-danger"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="to" type="checkbox" name="to" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="to">{{__('actionitems.To') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="to">{{__('actionitems.To') }}
+          <span class="rel badge badge-danger"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="text" type="checkbox" name="text" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="text">{{__('actionitems.Text') . '（' . __('actionitems.Lines') . '）' }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="text">{{__('actionitems.Text') . '（' . __('actionitems.Lines') . '）' }}
+          <span class="rel badge badge-danger"></span>
+        </label>
       </div>
       <div class="form-group">
         <input class="form-control" id="lines" type="text" class="form-control" name="lines">
@@ -66,13 +73,17 @@
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="value" type="checkbox" name="value" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}
+          <span class="rel badge badge-danger"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="checkbox" type="checkbox" name="checkbox" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="checkbox">{{__('actionitems.Checkbox') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="checkbox">{{__('actionitems.Checkbox') }}
+          <span class="rel badge badge-danger"></span>
+        </label>
       </div>
     </div>
     <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
