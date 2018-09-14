@@ -9,7 +9,7 @@ $(function () {
       $('#value').prop('checked') == false &&
       $('#checkbox').prop('checked') == false
     ) {
-      $('.rel').text('いずれか（複数可）をチェック');
+      $('.rel').text("いずれかをチェック（複数可）");
       $('#action-items-create').removeClass('btn-primary').addClass('btn-danger').text('未選択');
       $('html,body').animate({scrollTop:$('#from').offset().top});
       return false;
