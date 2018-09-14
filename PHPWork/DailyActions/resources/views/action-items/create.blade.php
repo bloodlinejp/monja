@@ -22,13 +22,14 @@
     </div>
     <div class="form-group">
       <label for="index1text">{{__('actionitems.Index1Text') }}</label>
-      <span class="badge badge-info ml-2">必須</span>
+      <span class="badge badge-danger ml-2">必須</span>
       <input class="form-control" id="index1text" type="text" name="index1text" required autofocus>
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input id="index2use" type="checkbox" class="custom-control-input" name="index2use" value="1">
         <label class="custom-control-label" style="position: absolute;" for="index2use">{{__('actionitems.Index2Use') . '（' . __('actionitems.Index2Text') . '）' }}</label>
+        <span class="badge badge-success ml-2">任意</span>
       </div>
       <div class="form-group">
         <input class="form-control" id="index2text" type="text" name="index2text">
@@ -38,6 +39,7 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="index3use" type="checkbox" name="index3use" value="1">
         <label class="custom-control-label" style="position: absolute;" for="index3use">{{__('actionitems.Index3Use') . '（' . __('actionitems.Index3Text') . '）' }}</label>
+        <span class="badge badge-success ml-2">任意</span>
       </div>
       <div class="form-group">
         <input class="form-control" id="index3text" type="text" name="index3text">
