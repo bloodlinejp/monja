@@ -19,7 +19,7 @@ $(function () {
 
 // チェックボックスチェック時の動作
 $('input[type=checkbox][name!="index2use"][name!="index3use"]').change(function() {
-  if ($(this).prop('checked') == true {
+  if ($(this).prop('checked') == true) {
     $('.rel').text('');
       $('#action-items-create').removeClass('btn-danger').addClass('btn-primary').text('登録');
   }
