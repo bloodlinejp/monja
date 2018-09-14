@@ -1,6 +1,6 @@
-// action-items Viewで使用するJS
+// action-items View のJQuery
 
-// 登録ボタン押下時の未入力相関チェック
+// 登録ボタン押下時のチェックボックス相関チェック
 $(function () {
   $('#action-items-create').click(function () {
     if ($('#from').prop('checked') == false &&
@@ -17,9 +17,11 @@ $(function () {
   })
 });
 
-// チェックされた場合の動作
+// チェックボックスチェック時の動作
 $('input[type=checkbox]').change(function() {
-  if ($(this).prop('checked')) {
+  if ($(this).prop('checked') == true &&
+      $(this).attr('name') != 'text2use' &&
+      $(this).attr('name') != 'text3use'   {
     $('.rel').text('');
       $('#action-items-create').removeClass('btn-danger').addClass('btn-primary').text('登録');
   }
