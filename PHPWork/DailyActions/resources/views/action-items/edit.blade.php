@@ -22,6 +22,7 @@
     </div>
     <div class="form-group">
       <label for="index1text">{{__('actionitems.Index1Text') }}</label>
+      <span class="badge badge-danger ml-2">必須</span>
       <input class="form-control" id="index1text" type="text" class="form-control" name="index1text" value="{{ $actionitem->index1text }}" required autofocus>
     </div>
     <div class="form-group">
@@ -31,7 +32,9 @@
             checked="checked"
             @endif
         >
-        <label class="custom-control-label" style="position: absolute;" for="index2use">{{__('actionitems.Index2Use').'（'.__('actionitems.Index2Text').'）' }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="index2use">{{__('actionitems.Index2Use').'（'.__('actionitems.Index2Text').'）' }}
+          <span class="badge badge-success ml-2">任意</span>
+        </label>
       </div>
       <div class="form-group">
         <input id="index2text" type="text" class="form-control" name="index2text" value="{{ $actionitem->index2text }}">
@@ -44,7 +47,9 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="index3use">{{__('actionitems.Index3Use').'（'.__('actionitems.Index3Text').'）' }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="index3use">{{__('actionitems.Index3Use').'（'.__('actionitems.Index3Text').'）' }}
+          <span class="badge badge-success ml-2">任意</span>
+        </label>
       </div>
       <div class="form-group">
         <input id="index3text" type="text" class="form-control" name="index3text" value="{{ $actionitem->index3text }}">
@@ -57,7 +62,9 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="from">{{__('actionitems.From') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="from">{{__('actionitems.From') }}
+          <span class="msg badge badge-danger ml-2"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
@@ -67,7 +74,9 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="to">{{__('actionitems.To') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="to">{{__('actionitems.To') }}
+          <span class="msg badge badge-danger ml-2"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
@@ -77,7 +86,9 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="text">{{__('actionitems.Text') . '（' . __('actionitems.Lines') . '）' }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="text">{{__('actionitems.Text') . '（' . __('actionitems.Lines') . '）' }}
+          <span class="msg badge badge-danger ml-2"></span>
+        </label>
       </div>
       <div class="form-group">
         <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}">
@@ -90,7 +101,9 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}
+          <span class="msg badge badge-danger ml-2"></span>
+        </label>
       </div>
     </div>
     <div class="form-group">
@@ -100,13 +113,15 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="checkbox">{{__('actionitems.Checkbox') }}</label>
+        <label class="custom-control-label" style="position: absolute;" for="checkbox">{{__('actionitems.Checkbox') }}
+          <span class="msg badge badge-danger ml-2"></span>
+        </label>
       </div>
     </div>
     <div class="float-left">
       <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
       <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actionitems.Reset') }}</button>
-      <button type="submit" name="submit" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
+      <button type="submit" name="submit" id="btn-action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
     </div>
   </form>
   <div class="float-right mb-4">

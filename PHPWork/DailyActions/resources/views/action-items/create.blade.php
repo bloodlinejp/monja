@@ -28,8 +28,9 @@
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input id="index2use" type="checkbox" class="custom-control-input" name="index2use" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="index2use">{{__('actionitems.Index2Use') . '（' . __('actionitems.Index2Text') . '）' }}</label>
-        <span class="badge badge-success ml-2">任意</span>
+        <label class="custom-control-label" style="position: absolute;" for="index2use">{{__('actionitems.Index2Use') . '（' . __('actionitems.Index2Text') . '）' }}
+          <span class="badge badge-success ml-2">任意</span>
+        </label>
       </div>
       <div class="form-group">
         <input class="form-control" id="index2text" type="text" name="index2text">
@@ -38,8 +39,9 @@
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="index3use" type="checkbox" name="index3use" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="index3use">{{__('actionitems.Index3Use') . '（' . __('actionitems.Index3Text') . '）' }}</label>
-        <span class="badge badge-success ml-2">任意</span>
+        <label class="custom-control-label" style="position: absolute;" for="index3use">{{__('actionitems.Index3Use') . '（' . __('actionitems.Index3Text') . '）' }}
+          <span class="badge badge-success ml-2">任意</span>
+        </label>
       </div>
       <div class="form-group">
         <input class="form-control" id="index3text" type="text" name="index3text">
@@ -49,7 +51,7 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="from" type="checkbox" name="from" value="1">
         <label class="custom-control-label" style="position: absolute;" for="from">{{__('actionitems.From') }}
-          <span class="rel badge badge-danger"></span>
+          <span class="msg badge badge-danger ml-2"></span>
         </label>
       </div>
     </div>
@@ -57,7 +59,7 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="to" type="checkbox" name="to" value="1">
         <label class="custom-control-label" style="position: absolute;" for="to">{{__('actionitems.To') }}
-          <span class="rel badge badge-danger"></span>
+          <span class="msg badge badge-danger ml-2"></span>
         </label>
       </div>
     </div>
@@ -65,7 +67,7 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="text" type="checkbox" name="text" value="1">
         <label class="custom-control-label" style="position: absolute;" for="text">{{__('actionitems.Text') . '（' . __('actionitems.Lines') . '）' }}
-          <span class="rel badge badge-danger"></span>
+          <span class="msg badge badge-danger ml-2"></span>
         </label>
       </div>
       <div class="form-group">
@@ -76,7 +78,7 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="value" type="checkbox" name="value" value="1">
         <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}
-          <span class="rel badge badge-danger"></span>
+          <span class="msg badge badge-danger ml-2"></span>
         </label>
       </div>
     </div>
@@ -84,13 +86,13 @@
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="checkbox" type="checkbox" name="checkbox" value="1">
         <label class="custom-control-label" style="position: absolute;" for="checkbox">{{__('actionitems.Checkbox') }}
-          <span class="rel badge badge-danger"></span>
+          <span class="msg badge badge-danger ml-2"></span>
         </label>
       </div>
     </div>
     <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
     <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actionitems.Reset') }}</button>
-    <button type="submit" name="submit" id="action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
+    <button type="submit" name="submit" id="btn-action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
   </form>
 </div>
 @endsection
