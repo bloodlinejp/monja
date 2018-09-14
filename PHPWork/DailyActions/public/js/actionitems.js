@@ -18,7 +18,7 @@ $(function () {
 });
 
 // チェックボックスチェック時の動作
-$('input[type=checkbox]' + 'input[name!=index2use]' + 'input[name!=index3use]').change(function() {
+$('input[type=checkbox]' + '[name!=index2use]' + '[name!=index3use]').change(function() {
   if ($(this).prop('checked') == true {
     $('.rel').text('');
       $('#action-items-create').removeClass('btn-danger').addClass('btn-primary').text('登録');
