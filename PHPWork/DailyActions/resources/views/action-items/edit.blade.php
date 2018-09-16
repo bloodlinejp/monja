@@ -7,7 +7,7 @@
   <div class="mb-4">
     <h1>{{ $title }}</h1>
   </div>
-  <form action="{{ url('action-items/'.$actionitem->id) }}" method="post">
+  <form action="{{ url('action-items/'.$actionitem->id) }}" method="POST">
     @csrf
     @method('PUT')
     <div class="form-group">

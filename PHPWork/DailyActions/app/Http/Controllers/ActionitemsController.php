@@ -111,8 +111,7 @@ class ActionitemsController extends Controller
    * 選択項目更新
    *
    * @param  \Illuminate\Http\Request  $request
-   * @param  App\Models\Actionitem  $actionitem
-   * @return \Illuminate\Http\Response
+   * @param  $id
    */
   public function update(Request $request, $id)
   {

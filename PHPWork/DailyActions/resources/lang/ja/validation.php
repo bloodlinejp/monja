@@ -30,7 +30,7 @@ return [
         'array'   => 'The :attribute must have between :min and :max items.',
     ],
     'boolean'              => 'The :attribute field must be true or false.',
-    'confirmed'            => 'The :attribute confirmation does not match.',
+    'confirmed'            => ':attributeの確認入力と一致しません',
     'date'                 => 'The :attribute is not a valid date.',
     'date_format'          => 'The :attribute does not match the format :format.',
     'different'            => 'The :attribute and :other must be different.',
@@ -128,6 +128,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'password' => [
+            'compare_my_password' => ':attributeが一致しません',
+        ],
     ],
 
     /*
@@ -141,6 +144,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+      'name'            => '名前',
+      'email'           => 'メールアドレス',
+      'password'        => 'パスワード',
+      'newpassword'     => '新しいパスワード',
+    ],
 
 ];

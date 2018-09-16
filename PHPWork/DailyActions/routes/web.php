@@ -16,7 +16,8 @@ Route::get('/', 'ActionsController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
+Route::put('/home', 'HomeController@update');
 
 // 活動項目
 Route::post('action-items/listupdate', 'ActionitemsController@listupdate');
