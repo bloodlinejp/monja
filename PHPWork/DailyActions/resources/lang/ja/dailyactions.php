@@ -13,7 +13,7 @@ return [
   'Register'      => 'ユーザー登録',
 	'PasswordReset' => 'パスワード初期化',
   'Home'          => 'アカウント管理',
-  'Menu'          => 'MENU',
+  'Menu'          => 'メニュー',
 
   // 共通部品の削除ボタンで使用
   'Delete'        => '削除',
