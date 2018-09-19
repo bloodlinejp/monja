@@ -43,7 +43,7 @@
                             <label for="email-confirm" class="col-md-4 col-form-label text-md-right">{{ __('home.Confirm E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email-confirm" type="email" class="form-control" name="email_confirmation" required>
+                                <input id="email-confirm" type="email" class="form-control" name="email_confirmation">
                             </div>
                         </div>
 
@@ -65,7 +65,7 @@
                             <label for="newpassword" class="col-md-4 col-form-label text-md-right">{{ __('home.New Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="newpassword" type="password" class="form-control{{ $errors->has('newpassword') ? ' is-invalid' : '' }}" name="newpassword" required>
+                                <input id="newpassword" type="password" class="form-control{{ $errors->has('newpassword') ? ' is-invalid' : '' }}" name="newpassword">
 
                                 @if ($errors->has('newpassword'))
                                     <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
                             <label for="newpassword-confirm" class="col-md-4 col-form-label text-md-right">{{ __('home.Confirm New Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="newpassword-confirm" type="password" class="form-control" name="newpassword_confirmation" required>
+                                <input id="newpassword-confirm" type="password" class="form-control" name="newpassword_confirmation">
                             </div>
                         </div>
 
