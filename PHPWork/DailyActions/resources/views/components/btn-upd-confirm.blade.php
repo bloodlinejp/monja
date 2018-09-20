@@ -1,10 +1,10 @@
 <!-- 1.モーダル表示用ボタン -->
-<button class="btn btn-danger" data-toggle="modal" data-target="#del-confirmation">
-    {{ __('dailyactions.Delete') }}
+<button class="btn btn-primary" data-toggle="modal" data-target="#upd-confirmation">
+    {{ __('dailyactions.Update') }}
 </button>
 
 <!-- 2.モーダル配置 -->
-<div class="modal fade" id="del-confirmation" tabindex="-1">
+<div class="modal fade" id="upd-confirmation" tabindex="-1">
     <div class="modal-dialog"> 
         <!-- 3.モーダルコンテンツ -->
         <div class="modal-content">
@@ -17,16 +17,16 @@
             </div>
             <!-- 5.モーダルボディ -->
             <div class="modal-body">
-                削除してもよろしいですか？
+                更新してもよろしいですか？
             </div>
             <!-- 6.モーダルフッタ -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
                 <form style="display:inline" action="{{ url($table.'/'.$id) }}" method="post">
                     @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">
-                        {{ __('dailyactions.Delete') }}
+                    @method('PUT')
+                    <button type="submit" class="btn btn-primary">
+                        {{ __('dailyactions.Update') }}
                     </button>
                 </form>
             </div>
