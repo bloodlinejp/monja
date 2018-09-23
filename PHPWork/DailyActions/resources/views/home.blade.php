@@ -15,7 +15,8 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('home.Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $user->name) }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" placeholder="{{ old('name', $user->name) }}" autofocus>
+                                    <span class="errmsg invalid-feedback" role="alert"></span>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +30,8 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('home.E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email', $user->email) }}" required>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="{{ old('email', $user->email) }}">
+                                    <span class="errmsg invalid-feedback" role="alert"></span>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -43,8 +45,9 @@
                             <label for="email-confirm" class="col-md-4 col-form-label text-md-right">{{ __('home.Confirm E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email-confirm" type="email" class="form-control" name="email_confirmation">
+                                <input id="email-confirm" type="email" class="form-control" name="email_confirmation" placeholder="{{ old('email_confirmation', $user->email_confirmation) }}" disabled>
                             </div>
+                            <label><span class="msg badge badge-success">{{ __('dailyactions.IfChange') }}</span></label>
                         </div>
 
                         <div class="form-group row">
@@ -66,6 +69,7 @@
 
                             <div class="col-md-6">
                                 <input id="newpassword" type="password" class="form-control{{ $errors->has('newpassword') ? ' is-invalid' : '' }}" name="newpassword">
+                                    <span class="errmsg invalid-feedback" role="alert"></span>
 
                                 @if ($errors->has('newpassword'))
                                     <span class="invalid-feedback" role="alert">
@@ -73,20 +77,24 @@
                                     </span>
                                 @endif
                             </div>
+                            <label><span class="msg badge badge-success">{{ __('dailyactions.IfChange') }}</span></label>
                         </div>
 
                         <div class="form-group row">
                             <label for="newpassword-confirm" class="col-md-4 col-form-label text-md-right">{{ __('home.Confirm New Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="newpassword-confirm" type="password" class="form-control" name="newpassword_confirmation">
+                                <input id="newpassword-confirm" type="password" class="form-control" name="newpassword_confirmation" disabled>
                             </div>
+                            <label><span class="msg badge badge-success">{{ __('dailyactions.IfChange') }}</span></label>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('home.Reset') }}</button>
-                                <button type="submit" class="btn btn-primary">{{ __('home.Register') }}</button>                            </div>
+                                @component('components.btn-upd-confirm', ['btnid' => 'btn-users-update'])
+                                @endcomponent
+                            </div>
                         </div>
                     </form>
                 </div>

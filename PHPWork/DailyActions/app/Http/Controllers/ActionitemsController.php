@@ -72,6 +72,7 @@ class ActionitemsController extends Controller
     $actionitem->text = $request->input('text', 0);
     $actionitem->lines = $request->input('lines');
     $actionitem->value = $request->input('value', 0);
+    $actionitem->unit = $request->input('unit');
     $actionitem->checkbox = $request->input('checkbox', 0);
     $actionitem->save();
     return redirect('action-items');
@@ -129,6 +130,7 @@ class ActionitemsController extends Controller
     $actionitem->text = $request->input('text', 0);
     $actionitem->lines = $request->input('lines');
     $actionitem->value = $request->input('value', 0);
+    $actionitem->unit = $request->input('unit');
     $actionitem->checkbox = $request->input('checkbox', 0);
     $actionitem->save();
 

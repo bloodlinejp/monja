@@ -26,7 +26,7 @@
       </div>
       @endif
       <div class="col-12 col-sm-6">
-        <div class="card border-secondary mb-3">
+        <div class="card border-secondary mb-3 shadow">
           <h4 class="card-header text-white bg-success">{{ $actionitem->index1text }}</h4>
           <div class="card-body">
       @php
@@ -63,8 +63,11 @@
                 </div>
               @endif
               @if ($actionitem->value)
-                <div class="mr-4">
-                  <input id="value" type="number" step="0.01" class="form-control form-control-sm" name="actions[{{ $actionitem->id }}][value]">
+                <div class="input-group mr-4">
+                  <input id="value" type="number" step="0.01" class="form-control" name="actions[{{ $actionitem->id }}][value]" aria-describedby="append">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="append">{{ $actionitem->unit }}</span>
+                  </div>
                 </div>
               @endif
               @if ($actionitem->to)
@@ -133,7 +136,8 @@
       </div>
     </div>
     <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actions.Reset') }}</button>
-    <button type="submit" name="submit" class="btn btn-primary">{{ __('actions.Submit') }}</button>
+    @component('components.btn-upd-confirm', ['text' => __('actions.Create')])
+    @endcomponent
   </form>
 </div>
 @endsection

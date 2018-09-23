@@ -12,6 +12,10 @@ return [
   'EditAction'       => '活動記録',
   'EditTodaysAction' => '活動記録（本日）',
   'Reset'            => 'クリア',
-  'Submit'           => '登録',
+  'Submit'           => '実行',
+  'Create'           => '登録',
+  'Update'           => '更新',
+  'Edit'             => '編集',
+  'Delete'           => '削除',
 
 ];

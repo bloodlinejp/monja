@@ -39,32 +39,32 @@ class HomeController extends Controller
     {
       $user = Auth::getUser();
 
-      $rules = ['name' => 'required|string|max:255',
-        'name' => 'required|string|max:255',
-        'email' => [
+      $rules = ['password' => 'required|CompareMyPassword'];
+      // 名前がnullの場合は検証しない
+      if (!(is_null($request->input('name')))) {
+        $rules['name'] = 'required|string|max:255';
+      }
+      // メールアドレス及びメールアドレスの確認入力がnullの場合は検証しない
+      if (!(is_null($request->input('email')) && is_null($request->input('email_confirmation')))) {
+        $rules['email'] = [
           'required', 'string', 'email', 'max:255', 'confirmed',
-          Rule::unique('users')->ignore($user->id),
-        ],
-        'password' => 'CompareMyPassword',
-      ];
-
-      if ($request->input('email') == $user->email) {
-        $rules['email'] = ['required', 'string', 'email', 'max:255',
           Rule::unique('users')->ignore($user->id),
         ];
       }
-
+      // 新パスワード及び新パスワードの確認入力がnullの場合は検証しない
       if (!(is_null($request->input('newpassword')) && is_null($request->input('newpassword_confirmation')))) {
         $rules['newpassword'] = 'string|min:8|confirmed';
       }
 
       $validatedata = $request->validate($rules);
 
-      $user->name = $request->input('name');
-      if ($request->input('email') !== $user->email) {
+      if (!(is_null($request->input('name'))) && $request->input('name') !== $user->name) {
+        $user->name = $request->input('name');
+      }
+      if (!(is_null($request->input('email'))) && $request->input('email') !== $user->email) {
         $user->email = $request->input('email');
       }
-      if (!(is_null($request->input('newpassword')) && is_null($request->input('newpassword_confirmation')))) {
+      if (!(is_null($request->input('newpassword')))) {
         $user->password = Hash::make($request->input('newpassword'));
       }
       $user->save();

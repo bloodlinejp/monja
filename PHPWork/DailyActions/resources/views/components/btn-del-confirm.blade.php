@@ -17,11 +17,11 @@
             </div>
             <!-- 5.モーダルボディ -->
             <div class="modal-body">
-                削除してもよろしいですか？
+                {{ __('dailyactions.Delete') }}{{ __('dailyactions.Confirm') }}
             </div>
             <!-- 6.モーダルフッタ -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">{{ __('dailyactions.Close') }}</button>
                 <form style="display:inline" action="{{ url($table.'/'.$id) }}" method="post">
                     @csrf
                     @method('DELETE')

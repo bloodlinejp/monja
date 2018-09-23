@@ -33,7 +33,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input class="form-control" id="index2text" type="text" name="index2text">
+        <input class="form-control" id="index2text" type="text" name="index2text" placeholder="{{__('actionitems.Index2Text')}}" disabled>
       </div>
     </div>
     <div class="form-group">
@@ -44,7 +44,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input class="form-control" id="index3text" type="text" name="index3text">
+        <input class="form-control" id="index3text" type="text" name="index3text" placeholder="{{__('actionitems.Index3Text')}}" disabled>
       </div>
     </div>
     <div class="form-group">
@@ -71,15 +71,18 @@
         </label>
       </div>
       <div class="form-group">
-        <input class="form-control" id="lines" type="text" class="form-control" name="lines">
+        <input class="form-control" id="lines" type="number" class="form-control" name="lines" placeholder="{{__('actionitems.Lines') }}" disabled>
       </div>
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
         <input class="custom-control-input" id="value" type="checkbox" name="value" value="1">
-        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}
+        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') . '（' . __('actionitems.Unit') . '）' }}
           <span class="msg badge badge-danger ml-2"></span>
         </label>
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="unit" type="text" class="form-control" name="unit" placeholder="{{__('actionitems.Unit') }}" disabled>
       </div>
     </div>
     <div class="form-group">
@@ -92,7 +95,8 @@
     </div>
     <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
     <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actionitems.Reset') }}</button>
-    <button type="submit" name="submit" id="btn-action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
+    @component('components.btn-upd-confirm', ['btnid' => 'btn-action-items-create', 'text' => __('actionitems.Create')])
+    @endcomponent
   </form>
 </div>
 @endsection

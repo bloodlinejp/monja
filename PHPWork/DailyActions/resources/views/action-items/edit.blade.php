@@ -37,7 +37,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input id="index2text" type="text" class="form-control" name="index2text" value="{{ $actionitem->index2text }}">
+        <input id="index2text" type="text" class="form-control" name="index2text" value="{{ $actionitem->index2text }}" {{ ($actionitem->index2use == 1) ? '' : 'disabled' }}>
       </div>
     </div>
     <div class="form-group">
@@ -52,7 +52,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input id="index3text" type="text" class="form-control" name="index3text" value="{{ $actionitem->index3text }}">
+        <input id="index3text" type="text" class="form-control" name="index3text" value="{{ $actionitem->index3text }}" {{ ($actionitem->index3use == 1) ? '' : 'disabled' }}>
       </div>
     </div>
     <div class="form-group">
@@ -91,7 +91,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}">
+        <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}" {{ ($actionitem->text == 1) ? '' : 'disabled' }}>
       </div>
     </div>
     <div class="form-group">
@@ -101,9 +101,12 @@
             checked="checked"
           @endif
          > 
-        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') }}
+        <label class="custom-control-label" style="position: absolute;" for="value">{{__('actionitems.Value') . '（' . __('actionitems.Unit') . '）' }}
           <span class="msg badge badge-danger ml-2"></span>
         </label>
+      </div>
+      <div class="form-group">
+        <input id="unit" type="text" class="form-control" name="unit" value="{{ $actionitem->unit }}" {{ ($actionitem->value== 1) ? '' : 'disabled' }}>
       </div>
     </div>
     <div class="form-group">
@@ -121,7 +124,8 @@
     <div class="float-left">
       <button type="button" name="return" onclick="location.href='{{ url('action-items') }}'" class="btn btn-success">{{ __('actionitems.ReturnToList') }}</button>
       <button type="reset" name="reset" class="btn btn-outline-primary">{{ __('actionitems.Reset') }}</button>
-      <button type="submit" name="submit" id="btn-action-items-create" class="btn btn-primary">{{ __('actionitems.Submit') }}</button>
+      @component('components.btn-upd-confirm', ['btnid' => 'btn-action-items-create', 'text' => __('actionitems.Update')])
+      @endcomponent
     </div>
   </form>
   <div class="float-right mb-4">

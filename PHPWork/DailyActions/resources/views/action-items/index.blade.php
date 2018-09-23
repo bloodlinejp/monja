@@ -23,6 +23,7 @@
             <th>{{ __('actionitems.Text') }}</th>
             <th>{{ __('actionitems.Lines') }}</th>
             <th>{{ __('actionitems.Value') }}</th>
+            <th>{{ __('actionitems.Unit') }}</th>
             <th>{{ __('actionitems.Checkbox') }}</th>
           </tr>
         </thead>
@@ -110,6 +111,7 @@
                   <label class="custom-control-label" style="position: absolute;" for="actionitems[{{ $actionitem->id }}][value]"></label>
                 </div>
               </td>
+              <td class="text-right"><a href="{{ url('action-items/'.$actionitem->id).'/edit' }}">{{ $actionitem->unit }}</a></td>
               <td>
                 <div class="custom-control custom-checkbox text-center">
                   <input type="hidden" name="actionitems[{{ $actionitem->id }}][checkbox]" value="0">
@@ -125,8 +127,9 @@
           @endforeach
         </tbody>
       </table>
-      <button type="submit" name="submit" class="btn btn-success">{{ __('actionitems.Update') }}</button>
       <a class="btn btn-primary" href="{{ url('action-items/create') }}">{{ __('actionitems.CreateActionitem') }}</a>
+      @component('components.btn-upd-confirm', ['btn' => 'btn-success'])
+      @endcomponent
     </form>
   </div>
 </div>

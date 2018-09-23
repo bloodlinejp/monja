@@ -1,7 +1,7 @@
 <!-- 1.モーダル表示用ボタン -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#upd-confirmation">
-    {{ __('dailyactions.Update') }}
-</button>
+<a id="{{ $btnid or 'upd-btn' }}" class="btn {{ $btn or 'btn-primary' }}" data-toggle="modal" data-target="#upd-confirmation" href="#">
+    {{ $text or __('dailyactions.Update') }}
+</a>
 
 <!-- 2.モーダル配置 -->
 <div class="modal fade" id="upd-confirmation" tabindex="-1">
@@ -17,17 +17,12 @@
             </div>
             <!-- 5.モーダルボディ -->
             <div class="modal-body">
-                更新してもよろしいですか？
+                {{ $text or __('dailyactions.Update')}}{{ __('dailyactions.Confirm') }}
             </div>
             <!-- 6.モーダルフッタ -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                <form style="display:inline" action="{{ url($table.'/'.$id) }}" method="post">
-                    @csrf
-                    @method('PUT')
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('dailyactions.Update') }}
-                    </button>
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">{{ __('dailyactions.Close') }}</button>
+                <button type="submit" class="btn btn-primary">{{ $text or __('dailyactions.Update') }}</button>
                 </form>
             </div>
         </div>
