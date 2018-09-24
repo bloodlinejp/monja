@@ -91,7 +91,7 @@
         </label>
       </div>
       <div class="form-group">
-        <input id="lines" type="text" class="form-control" name="lines" value="{{ $actionitem->lines }}" {{ ($actionitem->text == 1) ? '' : 'disabled' }}>
+        <input id="lines" type="number" class="form-control" name="lines" value="{{ $actionitem->lines }}" {{ ($actionitem->text == 1) ? '' : 'disabled' }}>
       </div>
     </div>
     <div class="form-group">

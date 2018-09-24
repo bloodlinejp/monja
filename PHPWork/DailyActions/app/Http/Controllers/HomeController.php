@@ -31,8 +31,9 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * アカウント設定画面
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
@@ -40,6 +41,7 @@ class HomeController extends Controller
       $user = Auth::getUser();
 
       $rules = ['password' => 'required|CompareMyPassword'];
+
       // 名前がnullの場合は検証しない
       if (!(is_null($request->input('name')))) {
         $rules['name'] = 'required|string|max:255';
@@ -58,12 +60,15 @@ class HomeController extends Controller
 
       $validatedata = $request->validate($rules);
 
+      // 名前がnullの場合はDB更新しない
       if (!(is_null($request->input('name'))) && $request->input('name') !== $user->name) {
         $user->name = $request->input('name');
       }
+      // メールアドレス及びメールアドレスの確認入力がnullの場合はDB更新しない
       if (!(is_null($request->input('email'))) && $request->input('email') !== $user->email) {
         $user->email = $request->input('email');
       }
+      // 新パスワードがnullの場合はDB更新しない
       if (!(is_null($request->input('newpassword')))) {
         $user->password = Hash::make($request->input('newpassword'));
       }
