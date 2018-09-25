@@ -15,7 +15,7 @@
       @component('components.select-number', [
         'min' => 1,
         'max' => ($max > 9) ? $max + 1 : 10,
-        'selected' => '',
+        'selected' => ($max > 9) ? $max + 1 : 10,
         ])
         @slot('name', 'order')
       @endcomponent
