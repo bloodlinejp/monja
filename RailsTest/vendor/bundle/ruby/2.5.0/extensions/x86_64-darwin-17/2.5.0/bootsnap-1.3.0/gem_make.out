@@ -1,0 +1,15 @@
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+/opt/local/bin/ruby2.5 -r ./siteconf20180927-39608-ccuul5.rb extconf.rb
+creating Makefile
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20180927-39608-1pf4p46/bootsnap
