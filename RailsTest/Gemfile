@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # ffi 1.11.1 のインストールでエラーとなるためバージョン固定
-gem 'ffi', '= 1.9.21'
+#gem 'ffi', '= 1.9.24'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
