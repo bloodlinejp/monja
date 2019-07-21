@@ -1,0 +1,33 @@
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/debase-0.2.3/ext/attach
+/opt/local/bin/ruby2.5 -r ./siteconf20190720-17563-15h9wou.rb extconf.rb
+Ignoring bindex-0.5.0 because its extensions are not built. Try: gem pristine bindex --version 0.5.0
+Ignoring bootsnap-1.3.2 because its extensions are not built. Try: gem pristine bootsnap --version 1.3.2
+Ignoring bootsnap-1.3.0 because its extensions are not built. Try: gem pristine bootsnap --version 1.3.0
+Ignoring byebug-10.0.2 because its extensions are not built. Try: gem pristine byebug --version 10.0.2
+Ignoring debase-0.2.2 because its extensions are not built. Try: gem pristine debase --version 0.2.2
+checking for vm_core.h... no
+checking for vm_core.h... no
+**************************************************************************
+No source for ruby-2.5.5-p157 (revision 67260) provided with
+debase-ruby_core_source gem. Falling back to ruby-2.5.1-p57.
+**************************************************************************
+checking for vm_core.h... yes
+checking for iseq.h... yes
+checking for version.h... yes
+checking for vm_core.h... yes
+checking for vm_insnhelper.h... yes
+checking for vm_core.h... yes
+checking for method.h... yes
+creating Makefile
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/debase-0.2.3/ext/attach
+make "DESTDIR=" clean
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/debase-0.2.3/ext/attach
+make "DESTDIR="
+compiling attach.c
+linking shared-object attach.bundle
+
+current directory: /Library/WebServer/Documents/workspace/RailsTest/vendor/bundle/ruby/2.5.0/gems/debase-0.2.3/ext/attach
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 attach.bundle ./.gem.20190720-17563-pard8m

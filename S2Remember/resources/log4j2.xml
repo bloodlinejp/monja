@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<Configuration status="off">
+    <!-- ログに使用するAppenderの設定 -->
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}], %-5p, %t, %c, %m%n</pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile name="FILE" fileName="./log/appLog.log" filePattern="appLog-%d{yyyy-MM-dd}-%i.log">
+            <TimeBasedTriggeringPolicy />
+<!--            <SizeBasedTriggeringPolicy size="100MB" /> -->
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+    </Appenders>
+    <!-- 出力に使用するロガーの設定 -->
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="STDOUT" level="INFO"/>
+<!--            <AppenderRef ref="FILE" /> -->
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1549449922930_2" label="spring" name="spring"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1461388047872_0" label="ウィンドウ・ワーキング・セット" name="Aggregate for window 1461388047872"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1528206528333_1" label="ウィンドウ・ワーキング・セット" name="Aggregate for window 1528206528333"/>
+<mruList name="spring"/>
 </workingSetManager>
