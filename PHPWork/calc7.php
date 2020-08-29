@@ -3,9 +3,9 @@
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 <head><title>複数値の足し算スクリプト。フォームVer</title></head>
 <body>
-<?php 
+<?php
 	define("NUMVALS",5);
-	
+
 	if (isset($_GET["val"]) == FALSE) {
 		print ("<form>\n");
 		for ($i = 0; $i < NUMVALS; $i++) {
@@ -18,7 +18,7 @@
 	<br>
 	<input type="submit" value="計算">
 	</form>
-<?php 
+<?php
 } else {
 	$result = 0;
 	for ($i = 0; $i < NUMVALS; $i++) {
